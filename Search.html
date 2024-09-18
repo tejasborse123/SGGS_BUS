@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Where is My Bus</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="Search.css">
+	<script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body onload="myFunction()">
+
+    <div id="loading">
+       <div class="loader">
+                <div class="loader loader-inner">   
+                </div>
+        </div>
+    </div>
+
+<div class="FullPage">
+<!--- //////////////////////////////////////////////Navbar//////////////////////////////////////////////////////////////-->
+    <div class="mcontainer">
+          <!---Navigation Bar -->
+
+                <div class="togglearea">
+                  <label for="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </div>
+         		 <input type="checkbox" id="toggle" title="toggle">
+		            <div class="navbar">
+		              
+		                     <div class="logo"><label id="lg">SGGS BUS</label></div>
+		                      <ul>
+		                         <li><a class="active" href="#"> Home</a></li>
+		                         <li><a href="contact.html"> Contact</a></li>
+		                         <li><a href="about.html"> About</a></li> 
+		                         <button style="background-color: dodgerblue; border: none;" class="button"><li><a class="img1" href="Profile.html"><img src="images/profile-line.png" alt="account" width="25" height="23" ></a></li></button>
+		                      </ul>
+		            </div>
+    </div>
+
+    <div class="HomeDiv1">
+        <div class="Back">
+            <center><h1 style="color: white">Search</h1></center>
+        </div>
+        <div class="SearchOption">
+            <div class="OptChild">
+                <form method="POST" action="View.php">
+                    <input required type="Search" class="FSearch" name="Registration_No" placeholder="Search Student by Registration Number">
+                    <input type="submit" class="FSubmit" name="SubmitRegBtn" value="Search">
+                </form><br>
+                <form method="POST" action="View.php">
+                    <input required type="Search" class="FSearch" name="Name" placeholder="Search Student by Name">
+                    <input type="submit" class="FSubmit" name="SubmitNameBtn" value="Search">
+                </form><br>
+                <form method="POST" action="View.php">
+                    <input required type="Search" class="FSearch" name="Contact_No" placeholder="Search by Student's Contact Number">
+                    <input type="submit" class="FSubmit" name="SubmitStudConBtn" value="Search">
+                </form><br>
+                <form method="POST" action="ViewStaff.php">
+                    <input required type="Search" class="FSearch" name="StaffName" placeholder="Search Staff Member by Name">
+                    <input type="submit" class="FSubmit" name="SubmitStaffNameBtn" value="Search">
+                </form><br>
+                <form method="POST" action="ViewStaff.php">
+                    <input required type="Search" class="FSearch" name="Staff_Contact_No" placeholder="Search Staff details by Contact Number">
+                    <input type="submit" class="FSubmit" name="SubmitStaffConBtn" value="Search">
+                </form>
+            </div>
+            <div class="OptChild">
+                <form method="POST" action="UpdateDelete.php">
+                    <input type="submit" class="FSubmit Center" name="SearchByYear" value="Get Records By Year">
+                </form><br>
+                <form method="POST" action="UpdateDelete.php">
+                    <input type="submit" class="FSubmit Center" name="SearchByGender" value="Get Records By Gender">
+                </form><br>
+                <form method="POST" action="UpdateDelete.php">
+                    <input type="submit" class="FSubmit Center" name="SearchByDept" value="Get Records By Department">
+                </form><br>
+                <form method="POST" action="UpdateDelete.php">
+                    <input type="submit" class="FSubmit Center" name="SearchByPickup" value="Get Records By Pickup Point">
+                </form><br>
+            </div>
+        </div><br>
+        <div class="Back" style="justify-content: space-around;">
+            <a href="Insert.html"><button>Add New Student Record</button></a>
+            <a href="Controls.html"><button>Back to Controls</button></a>
+            <a href="InsertStaff.html"><button>Add New Staff Record</button></a>
+        </div>
+    </div>
+
+   
+	<footer class="footer">
+		  <div class="copyright">
+		  	  <h3> All rights reserved. ©SGGSIE&T </h3>
+		  </div>
+	</footer>
+
+</div>
+</body>
+
+	<script>
+      var preloader = document.getElementById('loading');
+		      function myFunction() 
+		      {
+		        preloader.style.display = 'none';
+		      }
+    </script>
+    <script src="main.js"></script>
+</html>
+
+

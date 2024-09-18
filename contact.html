@@ -1,0 +1,130 @@
+o<head> 
+  <meta charset="utf-8">
+  <title>Where is My Bus</title>
+  <link rel="stylesheet" type="text/css" href="contactcss.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="common.css">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body onload="myFunction()">
+
+    <div id="loading">
+       <div class="loader">
+                <div class="loader loader-inner">   
+                </div>
+        </div>
+    </div>
+
+    <!---Navigation Bar -->
+
+    <div class="togglearea">
+      <label for="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <input type="checkbox" id="toggle" title="toggle">
+      <div class="navbar">
+      	
+       <div class="logo"><label id="lg">SGGS BUS</label></div>
+        <ul>
+           <li><a href="index.html"> Home</a></li>
+           <li><a class="Active" href="#"> Contact</a></li>
+           <li><a href="about.html"> About</a></li> 
+           <li><a href="Controls.html">DashBoard</a></li> 
+          <li><a class="img1" href="Profile.html"><img src="images/profile-line.png" alt="account" width="25" height="23" ></a></li> 
+            
+        </ul>
+      </div>
+
+      <!-- Actual Content of CONTACT US page-->
+        <div class="parents">
+              <div class="child">
+                    <br><h1 id="convo">Let's start Conversation</h1><br>
+                    <form action="contact.php" method="POST">
+                      <div class="input-row">
+                          <div class="input-group">
+                                  <label><h3>Name:</h3></label>
+                                  <input type="text" placeholder="Enter your Name here.." class="inputs Name" id="Name" name="name" required="required">
+                          </div>
+                          <div class="input-group">
+                                  <label><h3>Phone no:</h3></label>
+                                  <input type="text" placeholder="Enter your Phone no..." class="inputs Phone" name="phone" required="required">
+                          </div>
+                      </div>
+                      <div class="input-row">
+                          <div class="input-group">
+                                  <label><h3>Email:</h3></label>
+                                  <input type="Email" placeholder="Enter your Email here.." class="inputs Email" id="Name" name="email" required="required">
+                          </div>
+                          <div class="input-group">
+                                  <label><h3>Registration No:</h3></label>
+                                  <input type="text" placeholder="Enter your Registration Number" class="inputs Age" name="password" required="required">
+                          </div>
+                      </div>
+
+                      <label><h3>Message:</h3></label>
+                      <textarea rows="5" cols="35"class="Message" placeholder="Your Message here" name="message" required="required"></textarea><br>
+
+                      <button type="submit" class="button" id="submit" style="border-style: none;">Submit</button><br><br>
+                    </form><br><br><br><br>
+              </div>
+              <div class="child">
+                     <br><h1 id="convo">Reach us</h1><br>
+                     <h3 id="EmailHeading">Email : </h3><br><br>
+                        <h4 id="ActualEmails">
+                           <h4>Offical Mail :  </h4>
+                           <a id="Email" href="mailto:director@sggs.ac.in">director@sggs.ac.in</a><br><br><br>
+                           <h4>Creators Mail : </h4>
+                           <a id="Email" href="mailto:borsetejas764@gmail.com">
+                           borsetejas764@gmail.com </a><br>
+                           <a id="Email" href="mailto:tuppekarmedhavi@gmail.com">
+                           tuppekarmedhavi@gmail.com</a><br>
+                           <br><br><br>
+                      <div class="icons-wrapper">
+                        <i class="ri-instagram-line icon"></i>
+                        <i class="ri-facebook-circle-line icon"></i>
+                        <i class="ri-whatsapp-line icon"></i>
+                      </div>
+
+                      <br><br><br>
+              </div>
+        </div>
+
+    <script>
+      var preloader = document.getElementById('loading');
+
+      function myFunction() {
+        preloader.style.display = 'none';
+      }
+
+    </script>
+
+    <script>
+        document.querySelector('.button').onclick = function(){
+              var Name = document.querySelector('.Name').value;
+              var Phone = document.querySelector('.Phone').value;
+              var Email = document.querySelector('.Email').value;
+              var Age = document.querySelector('.Age').value;
+              var Message = document.querySelector('.Message').value;
+
+              if(Name == "" || Phone == "" || Email == "" || Age == "" || Message == "")
+              {
+                alert("Please enter complete required details");
+              }
+              else
+              {
+                alert("Feedback recorded Successfully");
+              }
+            }
+    </script>
+    
+</body>
+
+<footer class="Footer">
+    <div class="copyright">
+      <h3> All rights reserved. ©SGGSIE&T </h3>
+    </div>
+</footer>

@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    transition: background-color 2s ease-out 100ms;
+}
+
+body{
+    background-size: 400% 400%;
+}
+
+.parents{
+    width: auto;
+    height: auto;
+    margin: 85px; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: all 0.2 linear;
+}
+
+.child{
+    height: 390;
+    width: 450;
+    margin: 20px; 
+    border-radius: 30px;
+    background-color: #80ccff;
+}
+
+.child:hover{
+    box-shadow: 0 0 12px black;
+  }
+
+.child:first-child{
+    color: #E30B5D;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+}
+
+.child:last-child{
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+	height: 250px;
+}
+
+button{
+    margin-top: 15px;
+    position: relative;
+    padding: 10px 5px;
+    width: 200px;
+    color: #fff;
+    cursor: pointer;
+    background: springgreen;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.area h3 , .container h3{
+    margin: 0;
+    font-family: "Montserrat" , sans-serif;
+    background: url("images/flower.jpg");
+    background-size: auto 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s linear infinite;
+    font-weight: 1600;
+}
+
+@keyframes shine{
+    from{
+        background-position: center 0;
+    }
+    to{
+        background-position: center 200%;
+    }
+}
+
+.AdminPic{
+    height: 230px;
+    width: 230px;
+}
+
+@media screen and (max-width: 480px){
+    
+    .parent{
+        display: inline-block; 
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        background-color: red;
+    }
+    .child:first-child{
+        margin-top: 0px;
+        height: 570;
+        width: 460px;
+        border-radius: 30px;
+    }
+    .child:last-child{
+        margin-top: 25px;
+        padding: 45px;
+        height: 450;
+        width: 460px;
+        border-radius: 30px;
+    }
+}
+
+.child:hover{
+    box-shadow: 0 0 12px black;
+}
+
+@media screen and (min-width: 1300px) and (min-height: 720px){
+            .parents{
+                width: auto;
+                height: auto;
+                margin: 100px; 
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                transition: all 0.2 linear;
+            }
+
+            .child{
+                height: 500px; 
+                width: 600px;
+                margin: 20px; 
+                border-radius: 30px;
+                flex: 50;
+            }
+
+            .child:hover{
+                box-shadow: 0 0 12px black;
+            }
+
+            .child:first-child{
+                color: #E30B5D;
+                padding-left: 10px;
+                padding-right: 10px;
+                justify-content: center;
+               background-color: white;
+            }
+
+            .child:last-child{
+                justify-content: center;
+                background-color: white;
+            }
+
+            .child:hover{
+                 box-shadow: 0 0 12px black;
+            }
+
+}

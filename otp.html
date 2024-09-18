@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Where is My Bus</title>
+	<link rel="stylesheet" type="text/css" href="otp.css">
+</head>
+<body>
+	<div id="container">
+		<form action="verify.php" method="POST">
+			<div id="lbl">
+				Just one more step
+			</div>
+			<div id="sendOtp">
+				Enter the 6 digit code we sent to : <?php $mail = $_SESSION['email']; echo $mail; ?> 
+			</div> <br>
+			<div>
+				<input type="text" name="otp" placeholder="******" class="otp">
+			</div>
+			<div>
+				<input type="submit" id="button" name="Confirm" id="btn">
+			</div><br>
+			<div id="modifyNum">
+				<a href="entry.html">Change Email</a> | <a href="otp.html">Request New Code</a>
+			</div>
+			<div id="division">
+						------------------ OR ------------------ 
+			</div><br>
+
+			<div>
+				Have an Account..?? <span><a href="entry.html">LOGIN</a></span>
+			</div><br>
+
+			<div id="division">
+				<a href="entry.html"><button>Back To LOGIN</button></a>
+			</div>
+
+			<div class="loader-wrapper">
+					 <div class="loader">
+			 				<div class="loader loader-inner">		
+			 				</div>
+					 </div>
+			    </div>
+
+			<div class="signup-link">
+                            <label>
+                              <?php 
+
+                              	if(!isset($_SESSION['labelOtpFail']))
+                                    {
+                                      	$labelOtpFail = "" ;
+                                    }
+                                    else{
+                                       	$labelOtpFail = $_SESSION['labelOtpFail'];
+										echo $labelOtpFail; 
+										$labelOtpFail = "" ;
+										$_SESSION['labelOtpFail']=$labelOtpFail;
+                                    }
+      
+                              ?> 
+                            </label>
+            </div>
+		</form>
+	</div>
+</body>
+</html>

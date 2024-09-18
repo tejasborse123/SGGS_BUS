@@ -1,0 +1,96 @@
+<head>
+  <meta charset="utf-8">
+  <title>Where is My Bus</title>
+  <link rel="stylesheet" type="text/css" href="profile.css">
+  <link rel="stylesheet" type="text/css" href="common.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+  <body onload="myFunction()">
+
+    <div id="loading">
+       <div class="loader">
+                <div class="loader loader-inner">   
+                </div>
+        </div>
+    </div>
+
+<!--/////////////////////////////////////////////////////////////////////////////Navbar///////////////////////////////////////////////////////////////////////////////-->
+<div id="mcontainer">
+    <!---Navigation Bar -->
+
+  <div class="togglearea">
+              <label for="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+  </div>
+
+  <input type="checkbox" id="toggle" title="toggle">
+  
+  <div class="navbar">
+        
+             <div class="logo"><label id="lg">SGGS BUS</label></div>
+              <ul>
+                 <li><a href="index.html"> Home</a></li>
+                 <li><a href="contact.html"> Contact</a></li>
+                 <li><a href="about.html"> About</a></li> 
+                 <li><a href="Controls.html"> DashBoard</a></li>
+                 <li><a class="Active" href="#"><img src="images/profile-line.png" alt="account" width="25" height="23"></a></li>
+              </ul>
+
+  </div>
+
+</div> 
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<!--//////////////////////////////////////////////////////////////////////Footer//////////////////////////////////////////////////////////////////////////////////////-->
+
+<div class="parents">
+
+  <div class="Child">
+      <div class="area">
+        <button disabled><h3><b>!!..STUDENT..!!</b></h3></button><br><br>
+        <div>
+          <img src="images/STUDENT.jpg"> 
+        </div>
+        <a href="entry.html"><button>LOGIN</button></a>
+      </div>
+  </div>
+  
+  <div class="Child">
+     <div class="container">
+        <button disabled><h3><b>!!.ADMIN LOGIN.!!</b></h3></button><br><br>
+        <div>
+          <img src="images/Admin.png" class="AdminPic"> 
+        </div>
+        <a href="admin.html"><button>LOGIN</button></a>
+     </div>
+  </div>
+
+</div>
+
+
+<!--/////////////////////////////////////////////////Footer////////////////////////////////////////-->
+
+
+<footer class="Footer">
+    <div class="copyright">
+      <h3> All rights reserved. ©SGGSIE&T </h3>
+    </div>
+</footer>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <script>
+      var preloader = document.getElementById('loading');
+
+      function myFunction() {
+        preloader.style.display = 'none';
+      }
+
+    </script>
+    
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+</body>

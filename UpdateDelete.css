@@ -1,0 +1,100 @@
+body{
+	background-color: cyan;
+}
+
+.HomeDiv1{
+	font-size: 0.9em;
+	width: 98%;
+	margin: 0px 1%;
+	margin-top: 65px;
+	height: 77vh;
+	overflow-x: auto;
+	border-radius: 10px 10px 0 0;
+}
+
+table{
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border: 5px solid #009879;
+}
+
+th, td {
+	border-right: 1px solid #000;
+	padding: 8px;
+	text-align: center;
+}
+
+td{
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+thead{
+	background-color: #009879;
+}
+
+tbody{
+	background-color: thistle;
+}
+
+tbody tr{
+	border-bottom: 2px solid #009879;
+}
+
+.HomeDiv1 tbody tr:nth-of-type(even){
+	background-color: #f3f3f3;
+}
+
+.HomeDiv1 tbody tr:last-of-type{
+	border-bottom: 10px solid #009879;
+}
+
+.Button{
+	height: 35px;
+	width: 90%;
+	border-radius: 10px;
+	outline: none;
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.Edit{
+	background-color: dodgerblue;
+}
+
+.Delete{
+	background-color: red;
+}
+
+.Search{
+	display: flex;
+	justify-content: space-between;
+	margin: 2px 20px;
+}
+
+.Search button{
+	height: 35px;
+	padding: 2px 5px;
+	background-color: dodgerblue;
+	border-radius: 5px;
+}
+
+.Search input{
+	width: 20%;
+	outline: none;
+	height: 35px;
+	padding: 10px 5px;
+	border-radius: 20px;
+}
+
+@media screen and (max-width: 768px)
+{
+
+  th, td {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+}

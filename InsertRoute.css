@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    align-items: center;  
+    transition: background-color 2s ease-out 100ms;
+}
+
+html,body{
+	height: 90%;
+	width: 100%;
+}
+
+.HomeDiv1{
+	font-size: 0.9em;
+	width: 98%;
+	margin: 0px 1%;
+	margin-top: 65px;
+	height: 77vh;
+	overflow-x: auto;
+	border-radius: 10px 10px 0 0;
+}
+
+.SearchOption{	
+	height: 56vh;
+}
+
+input{
+	height: 35px;
+	width: 70%;
+	margin: 5px 15%;
+	border-radius: 10px;
+	padding: 0px 20px;
+	outline: none;
+}
+
+#Buttons{
+	background-color: dodgerblue;
+	width: 40%;
+	margin: 0px 30%;
+}
+
+h2{
+	background-color: dodgerblue;
+	width: 70%;
+	margin: 0 15%;
+	padding: 5px;
+	border-radius: 20px;
+}

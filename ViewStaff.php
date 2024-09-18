@@ -1,0 +1,155 @@
+<?php
+
+require_once('DbConnect.php');
+error_reporting(0);
+
+if (isset($_POST['SubmitStaffNameBtn'])) 
+{
+    $Search_By = $_POST['StaffName'];
+    $query = "SELECT * FROM `STAFFDATA` WHERE `Name` LIKE '%$Search_By%'";
+    $result = mysqli_query($conn,$query);
+}
+else if (isset($_POST['SubmitStaffConBtn'])) 
+{
+    $Search_By = $_POST['Staff_Contact_No'];
+    $query = "SELECT * FROM `STAFFDATA` WHERE `Staff_Contact_No` = '$Search_By'";
+    $result = mysqli_query($conn,$query);
+}
+else
+{
+    $query = "SELECT * FROM STAFFDATA";
+    $result = mysqli_query($conn,$query);
+}
+
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Where is My Bus</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<link rel="stylesheet" type="text/css" href="UpdateDelete.css">
+	<script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ 	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body onload="myFunction()">
+
+    <div id="loading">
+       <div class="loader">
+                <div class="loader loader-inner">   
+                </div>
+        </div>
+    </div>
+
+<div class="FullPage">
+<!--- //////////////////////////////////////////////Navbar////////////////////////////////////////////////////////////// -->
+    <div class="mcontainer">
+          <!---Navigation Bar -->
+
+                <div class="togglearea">
+                  <label for="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </div>
+         		 <input type="checkbox" id="toggle" title="toggle">
+		            <div class="navbar">
+		              
+		                     <div class="logo"><label id="lg">SGGS BUS</label></div>
+		                      <ul>
+		                         <li><a href="index.html"> Home</a></li>
+		                         <li><a href="contact.html"> Contact</a></li>
+		                         <li><a href="about.html"> About</a></li> 
+		                         <button style="background-color: dodgerblue; border: none;" class="button"><li><a class="img1" href="Profile.html"><img src="images/profile-line.png" alt="account" width="25" height="23" ></a></li></button>
+		                      </ul>
+		            </div>
+    </div>
+
+    <div class="HomeDiv1" style="background-color: #a64dff;">
+
+        <table>
+            
+            <div class="Search">
+                <a href="Search.html"><button>Search Record</button></a>
+                <content><h1>Staff Record</h1></content>
+                <a href="InsertStaff.html"><button>Add New Record</button></a>
+            </div>
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Staff Contact No</th>
+                    <th>Alternate Contact No</th>
+                    <th>Teaching/Non-Teaching</th>
+                    <th>Bus Route</th>
+                    <th>Pickup Point</th>
+                    <th>Address</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <?php 
+
+                        while($row = mysqli_fetch_assoc($result))
+                        {
+                    ?>
+
+                        <td><?php  echo $row['Name']; ?></td>
+                        <td><?php  echo $row['Gender']; ?></td>
+                        <td><?php  echo $row['Staff_Contact_No']; ?></td>
+                        <td><?php  echo $row['Alternate_Contact_No']; ?></td>
+                        <td><?php  echo $row['TNT']; ?></td>
+                        <td><?php  echo $row['Bus_Route']; ?></td>
+                        <td><?php  echo $row['Pickup_Point']; ?></td>
+                        <td><?php  echo $row['Address']; ?></td>
+                        <td><a href="EditStaff.php?nm=<?php echo $row['Name']?>&gn=<?php echo $row['Gender']?>&sc=<?php echo $row['Staff_Contact_No']?>&ac=<?php echo $row['Alternate_Contact_No']?>&TNT=<?php echo $row['TNT']?>&br=<?php echo $row['Bus_Route']?>&pp=<?php echo $row['Pickup_Point']?>&ad=<?php echo $row['Address']?>"><button class="Button Edit">Edit</button></a></td> 
+                        <td><a href="deleteStaff.php?nm=<?php echo $row['Name']; ?>"><button class="Button Delete">Delete</button></a></td>
+
+                </tr>
+                
+                    <?php
+                        }
+                    ?>
+
+            </tbody>
+
+        </table>
+
+        <?php
+            if (mysqli_num_rows($result) == 0) {
+                echo "<p><center><h3>No records found.</h3></center></p>";
+            }
+        ?>
+
+    </div>
+
+   
+	<footer class="footer">
+		  <div class="copyright">
+		  	  <h3> All rights reserved. ©SGGSIE&T </h3>
+		  </div>
+	</footer>
+
+</div>
+</body>
+
+	<script>
+      var preloader = document.getElementById('loading');
+		      function myFunction() 
+		      {
+		        preloader.style.display = 'none';
+		      }
+    </script>
+    <script src="main.js"></script>
+</html>

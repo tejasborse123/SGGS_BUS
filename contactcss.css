@@ -1,0 +1,918 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+}
+
+body{
+    /*background: linear-gradient( to right,#fcb045,#3ab45f,#6cc5eb); */
+    background-size: 400% 400%;
+    /*animation: animate-background 10s infinite ease-in-out;*/
+}
+
+.parents{
+    width: auto;
+    height: auto;
+    margin: 85px; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: all 0.2 linear;
+}
+
+.child{
+    height: 390;
+    width: 450;
+    margin: 20px; 
+    border-radius: 30px;
+    background-color: #80ccff;
+}
+
+.child:hover{
+    box-shadow: 0 0 12px black;
+  }
+
+.child:first-child{
+    padding: 0px 10px;
+    justify-content: center;
+}
+
+.child:last-child{
+    justify-content: center;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+}
+
+button{
+    background: linear-gradient(to right,#00BFFF,#E30B5D);
+    width: 100px;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+#submit:hover{
+    background:  linear-gradient(to right,#F4D03F,#00BFFF);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+tr td{
+    padding-left: 50px;
+    padding-top: 5px;
+}
+
+.inputs{
+    height: 25px;
+    padding: 0.75rem;
+    border: 1px solid dodgerblue;
+    border-radius: 20px; 
+}
+
+textarea{
+    resize: none;
+    border-radius: 20px;
+}
+
+.inputs:hover{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+textarea:hover{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+.inputs:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+#Email{
+    color: black;
+    text-decoration: none;
+}
+
+#Email:hover {
+    color: #E30B5D;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px){
+    .navbar
+    {
+        flex-direction: column;
+        display: none;
+    }
+    #toggle:checked + .navbar
+    {
+        display: flex;
+    }
+    .togglearea{
+        display: flex;
+    }
+    .navbar a:hover
+    {
+    background-color: white;
+    color: black;
+    }
+    .parent{
+        display: inline-block; 
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        background-color: red;
+    }
+    .child:first-child{
+        margin-top: 0px;
+        height: 570;
+        width: 460px;
+        border-radius: 30px;
+    }
+    .child:last-child{
+        margin-top: 25px;
+        padding: 45px;
+        height: 450;
+        width: 460px;
+        border-radius: 30px;
+    }
+    .input-row{
+        display: block;
+        justify-content: space-between;
+    }
+    .input-group{
+        display: block;
+        justify-content: space-between;
+    }
+    #Name{
+        margin-bottom: 20px;
+    }
+}
+
+.icons-wrapper{
+    position: relative;
+}
+
+.icons-wrapper::after{
+    content: '';.
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.ri-instagram-line{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ri-facebook-circle-line{
+    color: #1877f2;
+    animation-delay: 1s; 
+}
+
+.ri-whatsapp-line{
+    color: #25d366;
+    animation-delay: 2s; 
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#Email:hover {
+    color: #E30B5D;
+    text-decoration: underline;
+}
+
+.child:hover{
+    box-shadow: 0 0 12px black;
+}
+
+#submit:hover{
+    background:  linear-gradient(to right,#F4D03F,#00BFFF);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.inputs:hover{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+textarea:hover{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+.inputs:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+@media screen and (min-width: 1300px) and (min-height: 720px){
+            .parents{
+                width: auto;
+                height: auto;
+                margin: 100px; 
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                transition: all 0.2 linear;
+            }
+
+            .child{
+                height: 500px; 
+                width: 600px;
+                margin: 20px; 
+                border-radius: 30px;
+                flex: 50;
+            }
+
+            .child:hover{
+                box-shadow: 0 0 12px black;
+            }
+
+            #convo{
+                margin-top: 30px;
+            }
+
+            .child:first-child{
+                color: #E30B5D;
+                padding-left: 10px;
+                padding-right: 10px;
+                justify-content: center;
+               background-color: white;
+            }
+
+            .child:last-child{
+                color: #dc143c;
+                justify-content: center;
+                background-color: white;
+            }
+
+            .input-row{
+                padding-left: 35px;
+                padding-right: 35px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            label{
+                margin-bottom: 6px;
+                display: block;
+            }
+
+            button{
+                background:  linear-gradient(to right,#00BFFF,#E30B5D);
+                width: 100px;
+                outline: none;
+                color: #fff;
+                height: 35px;
+                border-radius: 30px;
+                margin-top: 20px;
+                box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+            }
+
+            #submit:hover{
+                background:  linear-gradient(to right,#F4D03F,#00BFFF);
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+            }
+
+            tr td{
+                padding-left: 50px;
+                padding-top: 5px;
+            }
+
+            .inputs{
+                height: 25px;
+                padding: 1.25rem;
+                border: 1px solid dodgerblue;
+                border-radius: 20px; 
+            }
+
+            textarea{
+                resize: none;
+                border-radius: 20px;
+            }
+
+            .inputs:hover{
+                border: 1px solid transparent;
+                border-radius: 10px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            textarea:hover{
+                border: 1px solid transparent;
+                border-radius: 20px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            .inputs:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+
+            textarea:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+            #EmailHeading{
+                margin-top: 20px;
+                font-size: 30px;
+            }
+            #ActualEmails{
+                font-size: 30px;
+            }
+
+            #Email:hover {
+               color: #E30B5D;
+               text-decoration: underline;
+            }
+
+            .child:hover{
+                 box-shadow: 0 0 12px black;
+            }
+
+            #submit:hover{
+                background:  linear-gradient(to right,#F4D03F,#00BFFF);
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+            }
+
+            .inputs:hover{
+                border: 1px solid transparent;
+                border-radius: 10px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            textarea:hover{
+                border: 1px solid transparent;
+                border-radius: 20px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            .inputs:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+
+            textarea:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+}
+
+body{
+    background: linear-gradient( to right,#fcb045,#3ab45f,#6cc5eb); 
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+#loading{
+  margin-top: 15%;
+  margin-left: 48%;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: orange no-repeat center;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.loader {
+    box-sizing: border-box; 
+    width: 100%; 
+    height: 100%;
+    border: 5px solid #162534; 
+    border-top-color: #4bc8eb; 
+    border-bottom-color: #f13a8f; 
+    border-radius: 50%; 
+    animation: rotate 5s linear infinite; 
+}
+
+.loader-inner{
+    border-top-color: #36f372;
+    border-bottom-color: #fff;
+    animation-duration: 2.5s;
+}
+
+  @keyframes rotate {
+    0%{
+        transform: scale(1) rotate(360deg);
+    }
+    50%{
+        transform: scale(.8) rotate(-360deg);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+
+}
+
+
+.parents{
+    width: auto;
+    height: auto;
+    margin: 85px; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transition: all 0.2 linear;
+}
+
+.child{
+    height: 390;
+    width: 450;
+    margin: 20px; 
+    border-radius: 30px;
+}
+
+.child:hover{
+    box-shadow: 0 0 12px black;
+  }
+
+.child:first-child{
+    color: #E30B5D;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: center;
+   background-color: white;
+}
+
+.child:last-child{
+    color: #dc143c;
+    justify-content: center;
+    background-color: white;
+}
+
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+}
+
+button{
+    background: linear-gradient(to right,#00BFFF,#E30B5D);
+    width: 100px;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+#submit:hover{
+    background:  linear-gradient(to right,#F4D03F,#00BFFF);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+tr td{
+    padding-left: 50px;
+    padding-top: 5px;
+}
+
+.inputs{
+    height: 25px;
+    padding: 0.75rem;
+    border: 1px solid dodgerblue;
+    border-radius: 20px; 
+}
+
+textarea{
+    resize: none;
+    border-radius: 20px;
+}
+
+.inputs:hover{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+textarea:hover{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+.inputs:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+#Email{
+    color: #E30B5D;
+    text-decoration: none;
+}
+
+#Email:hover {
+    color: #E30B5D;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px){
+    .navbar
+    {
+        flex-direction: column;
+        display: none;
+    }
+    #toggle:checked + .navbar
+    {
+        display: flex;
+    }
+    .togglearea{
+        display: flex;
+    }
+    .navbar a:hover
+    {
+    background-color: white;
+    color: black;
+    }
+    .parent{
+        display: inline-block; 
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        background-color: red;
+    }
+    .child:first-child{
+        margin-top: 0px;
+        height: 570;
+        width: 460px;
+        border-radius: 30px;
+    }
+    .child:last-child{
+        margin-top: 25px;
+        padding: 45px;
+        height: 450;
+        width: 460px;
+        border-radius: 30px;
+    }
+    .input-row{
+        display: block;
+        justify-content: space-between;
+    }
+    .input-group{
+        display: block;
+        justify-content: space-between;
+    }
+    #Name{
+        margin-bottom: 20px;
+    }
+}
+
+.icons-wrapper{
+    position: relative;
+}
+
+.icons-wrapper::after{
+    content: '';.
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.ri-instagram-line{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ri-facebook-circle-line{
+    color: #1877f2;
+    animation-delay: 1s; 
+}
+
+.ri-whatsapp-line{
+    color: #25d366;
+    animation-delay: 2s; 
+}
+
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#Email:hover {
+    color: #E30B5D;
+    text-decoration: underline;
+}
+
+.child:hover{
+    box-shadow: 0 0 12px black;
+}
+
+#submit:hover{
+    background:  linear-gradient(to right,#F4D03F,#00BFFF);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.inputs:hover{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+textarea:hover{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 12px 0 dodgerblue; 
+}
+
+.inputs:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+textarea:focus{
+    outline: none;
+    border-bottom: 1px solid dodgerblue;
+    box-shadow: 0 0 6px 0 dodgerblue;
+}
+
+@media screen and (min-width: 1300px) and (min-height: 720px){
+            .parents{
+                width: auto;
+                height: auto;
+                margin: 100px; 
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                transition: all 0.2 linear;
+            }
+
+            .child{
+                height: 500px; 
+                width: 600px;
+                margin: 20px; 
+                border-radius: 30px;
+                flex: 50;
+            }
+
+            .child:hover{
+                box-shadow: 0 0 12px black;
+            }
+
+            #convo{
+                margin-top: 30px;
+            }
+
+            .child:first-child{
+                color: #E30B5D;
+                padding-left: 10px;
+                padding-right: 10px;
+                justify-content: center;
+               background-color: white;
+            }
+
+            .child:last-child{
+                color: #dc143c;
+                justify-content: center;
+                background-color: white;
+            }
+
+            .input-row{
+                padding-left: 35px;
+                padding-right: 35px;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            label{
+                margin-bottom: 6px;
+                display: block;
+            }
+
+            button{
+                background:  linear-gradient(to right,#00BFFF,#E30B5D);
+                width: 100px;
+                outline: none;
+                color: #fff;
+                height: 35px;
+                border-radius: 30px;
+                margin-top: 20px;
+                box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+            }
+
+            #submit:hover{
+                background:  linear-gradient(to right,#F4D03F,#00BFFF);
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+            }
+
+            tr td{
+                padding-left: 50px;
+                padding-top: 5px;
+            }
+
+            .inputs{
+                height: 25px;
+                padding: 1.25rem;
+                border: 1px solid dodgerblue;
+                border-radius: 20px; 
+            }
+
+            textarea{
+                resize: none;
+                border-radius: 20px;
+            }
+
+            .inputs:hover{
+                border: 1px solid transparent;
+                border-radius: 10px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            textarea:hover{
+                border: 1px solid transparent;
+                border-radius: 20px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            .inputs:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+
+            textarea:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+            #EmailHeading{
+                margin-top: 20px;
+                font-size: 30px;
+            }
+            #ActualEmails{
+                font-size: 30px;
+            }
+
+            #Email:hover {
+               color: #E30B5D;
+               text-decoration: underline;
+            }
+
+            .child:hover{
+                 box-shadow: 0 0 12px black;
+            }
+
+            #submit:hover{
+                background:  linear-gradient(to right,#F4D03F,#00BFFF);
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+            }
+
+            .inputs:hover{
+                border: 1px solid transparent;
+                border-radius: 10px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            textarea:hover{
+                border: 1px solid transparent;
+                border-radius: 20px;
+                box-shadow: 0 0 12px 0 dodgerblue; 
+            }
+
+            .inputs:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+
+            textarea:focus{
+                outline: none;
+                border-bottom: 1px solid dodgerblue;
+                box-shadow: 0 0 6px 0 dodgerblue;
+            }
+}
+
+*/
